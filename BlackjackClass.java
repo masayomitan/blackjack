@@ -7,7 +7,7 @@ import java.util.Scanner;
 
  
  
-public class BlackjuckClass {
+public class BlackjackClass {
     public static void main(String[] args) {
         System.out.println("ゲームを開始します");
 
@@ -216,4 +216,5 @@ public class BlackjuckClass {
         default:
             return "例外です";
          }
-     }
+        }
+    }
