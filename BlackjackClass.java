@@ -37,6 +37,12 @@ public class BlackjackClass {
  
          System.out.println("ディーラーの2枚めのカードは秘密です。");
 
+         int playerPoint = sumPoint(player);
+         int dealerPoint = sumPoint(player);
+
+         System.out.println("あなたの現在のポイントは" + playerPoint + "です。" );
+
+
 
 
  
