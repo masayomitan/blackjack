@@ -45,7 +45,26 @@ public class BlackjackClass {
 
          while(true)
             System.out.println("カードを引きますか？Yes:y or No:n");
-            
+            Scanner scan = new Scanner(System.in);
+            String str = scan.next();
+
+            if("n".equals(str)) {
+                //手札に山札から一枚引く
+                player.add(deck.get(deckCount));
+                //山札と手札を一枚進め
+                deckCount++;
+                playerHands++;
+
+                System.out.println("あなたの" + playerHands + "枚目のカードは" + toDescription(player.get(playerHands - 1)));
+                 playerPoint = sumPoint(player);
+                 System.out.println("現在の合計は" + playerPoint );
+
+
+
+
+
+            }
+
 
 
 
