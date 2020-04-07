@@ -59,9 +59,14 @@ public class BlackjackClass {
                  playerPoint = sumPoint(player);
                  System.out.println("現在の合計は" + playerPoint );
 
-
-
-
+                  //プレイヤーのバーストチェック
+                  if(isBusted(playerPoint)) {
+                    System.out.println("残念、バーストしてしまいました。");
+                    return;
+                  }
+                } else {
+                    System.out.println("あなたの入力は" + str + " です。y か n を入力してください。");
+                }
 
             }
 
