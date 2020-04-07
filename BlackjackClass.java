@@ -115,7 +115,10 @@ public class BlackjackClass {
         }
     
     
-    
+    //山札（deck）に値を入れ、シャッフルするメソッド
+    private static void shuffleDeck(List<Integer> deck) {
+        
+    }
    
 
 
