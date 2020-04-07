@@ -37,6 +37,41 @@ public class BlackjackClass {
  
          System.out.println("ディーラーの2枚めのカードは秘密です。");
 
+         int playerPoint = sumPoint(player);
+         int dealerPoint = sumPoint(player);
+
+         System.out.println("あなたの現在のポイントは" + playerPoint + "です。" );
+
+
+         while(true)
+            System.out.println("カードを引きますか？Yes:y or No:n");
+            Scanner scan = new Scanner(System.in);
+            String str = scan.next();
+
+            if("n".equals(str)) {
+                //手札に山札から一枚引く
+                player.add(deck.get(deckCount));
+                //山札と手札を一枚進め
+                deckCount++;
+                playerHands++;
+
+                System.out.println("あなたの" + playerHands + "枚目のカードは" + toDescription(player.get(playerHands - 1)));
+                 playerPoint = sumPoint(player);
+                 System.out.println("現在の合計は" + playerPoint );
+
+                  //プレイヤーのバーストチェック
+                  if(isBusted(playerPoint)) {
+                    System.out.println("残念、バーストしてしまいました。");
+                    return;
+                  }
+                } else {
+                    System.out.println("あなたの入力は" + str + " です。y か n を入力してください。");
+                }
+
+            }
+
+
+
 
 
  
