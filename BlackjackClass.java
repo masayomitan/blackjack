@@ -43,6 +43,11 @@ public class BlackjackClass {
          System.out.println("あなたの現在のポイントは" + playerPoint + "です。" );
 
 
+         while(true)
+            System.out.println("カードを引きますか？Yes:y or No:n");
+            
+
+
 
 
  
