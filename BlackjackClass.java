@@ -123,11 +123,29 @@ public class BlackjackClass {
             deck.add(i);
         }
 
+        //山札をシャッフル
+        Collections.shuffle(deck);
 
-
+        //リストの中身を確認（デバッグ用）
+        //  for (int i=0; i<deck.size(); i++)
+        // {
+        //     System.out.println(deck.get(i));
+        // }
 
     }
-   
+
+
+   //手札がバーストしているか判定するメソッド
+   private static boolean isBusted(int point) {
+       if(point <= 21){
+           return false;
+       } else {
+           return true;
+       }
+    }
+
+    //現在の合計ポイントを計算するメソッド
+
 
 
 
